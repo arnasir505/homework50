@@ -4,3 +4,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.logo {
+    height: auto;
+    max-width: 50px;
+}
+
+.nav-link:hover {
+    color: rgb(165, 69, 42);
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 400px;
+}
