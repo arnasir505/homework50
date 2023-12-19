@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,36 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="task1.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div id="app"></div>
+    <script type="text/babel">
+        const Movie = ({ poster, title, year }) => {
+            return (
+                <div className="movie">
+                    <img src={poster} alt={title} className="poster" />
+                    <div class="info">
+                        <h3 className="title">{title}</h3>
+                        <span className="year">{year}</span>
+                    </div>
+                </div>);
+        };
+
+        const Movies = () => {
+            return (
+                <div className="container flex-movies">
+                    <Movie poster="https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDQzNDMzOQ@@._V1_.jpg" title="The Conjuring" year="2013" />
+                    <Movie poster="https://resizing.flixster.com/WGP1a7h-WDXCJgvLEqCHLuUN83Y=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Y5ZjI5ZTM2LTdjYzEtNGEwMy1hYWJlLTg2M2E2N2U0NjAxZC53ZWJw" title="Hereditary" year="2018" />
+                    <Movie poster="https://m.media-amazon.com/images/M/MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_FMjpg_UX1000_.jpg" title="IT" year="2017" />
+                </div>
+            );
+        };
+
+        ReactDOM.render(<Movies />, document.getElementById('app'))
+    </script>
 </body>
+
 </html>
