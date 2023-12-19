@@ -4,6 +4,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
 .logo {
     height: auto;
     max-width: 50px;
@@ -16,4 +22,18 @@ body {
 .carousel-item img {
     object-fit: cover;
     max-height: 400px;
+}
+
+.floatimg {
+    max-width: 300px;
+    height: auto;
+}
+
+.footer {
+    color: #fff;
+    background-color: rgb(56,34,15);
+}
+
+.icon {
+    height: 25px;
 }
